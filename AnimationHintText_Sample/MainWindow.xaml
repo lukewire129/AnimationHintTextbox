@@ -1,0 +1,25 @@
+﻿<Window
+    x:Class="AnimationHintText_Sample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrls="clr-namespace:AnimationHintTextbox.UI.Units;assembly=AnimationHintTextbox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="450"
+    Height="800"
+    Background="#000000"
+    mc:Ignorable="d">
+    <StackPanel VerticalAlignment="Center">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type ctrls:AnimationHintTextbox}">
+                <Setter Property="Width" Value="350" />
+                <Setter Property="Height" Value="50" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="HintTextColor" Value="White" />
+            </Style>
+        </StackPanel.Resources>
+        <ctrls:AnimationHintTextbox Margin="0,30" HintText="NAME" />
+        <ctrls:AnimationHintTextbox HintText="PASSWORD" />
+    </StackPanel>
+</Window>

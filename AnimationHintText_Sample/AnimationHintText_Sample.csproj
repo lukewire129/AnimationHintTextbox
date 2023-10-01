@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PackageId>AnimationHintText</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>lukewire</Authors>
+    <Company>lukewire</Company>
+    <Product>lukewire</Product>
+    <Copyright>lukewire</Copyright>
+    <Description>
+      AnimationHintText Component
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AnimationHintTextbox\AnimationHintTextbox.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationHintTextbox", "AnimationHintTextbox\AnimationHintTextbox.csproj", "{7A2ADFB8-095C-4A86-9606-B8AA306E855C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationHintText_Sample", "AnimationHintText_Sample\AnimationHintText_Sample.csproj", "{4D0E6770-2DB7-49F0-81CA-37260F56A198}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A2ADFB8-095C-4A86-9606-B8AA306E855C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2ADFB8-095C-4A86-9606-B8AA306E855C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2ADFB8-095C-4A86-9606-B8AA306E855C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2ADFB8-095C-4A86-9606-B8AA306E855C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0E6770-2DB7-49F0-81CA-37260F56A198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0E6770-2DB7-49F0-81CA-37260F56A198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0E6770-2DB7-49F0-81CA-37260F56A198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0E6770-2DB7-49F0-81CA-37260F56A198}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00F72679-5DED-4C0E-B0DF-A81725323F01}
+	EndGlobalSection
+EndGlobal
