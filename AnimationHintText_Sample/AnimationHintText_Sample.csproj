@@ -14,6 +14,10 @@
     <Description>
       AnimationHintText Component
     </Description>
+    <RepositoryUrl>https://github.com/lukewire129/AnimationHintTextbox</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/lukewire129/AnimationHintTextbox</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>lukewire,wpf,component,opensource,AnimationHintTextbox</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
