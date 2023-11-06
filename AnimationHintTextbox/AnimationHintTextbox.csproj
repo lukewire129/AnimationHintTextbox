@@ -19,4 +19,8 @@
     <PackageTags>lukewire,wpf,component,opensource,AnimationHintTextbox</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.106" />
+  </ItemGroup>
+
 </Project>

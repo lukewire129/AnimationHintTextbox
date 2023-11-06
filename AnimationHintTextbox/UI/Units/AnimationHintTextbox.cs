@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jamesnet.Wpf.Controls;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -64,30 +65,63 @@ public class AnimationHintTextbox : TextBox
         this.CaretBrush = this.Foreground;
     }
 
+    double topPoint = 0.0;
+    protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
+    {
+        base.OnRenderSizeChanged (sizeInfo);
+
+        topPoint = -(sizeInfo.NewSize.Height/ 2);
+    }
+
     private void FocusedEnterAction()
     {
-        var topPoint = -(this.vb.ActualHeight / 2);
-
         if (String.IsNullOrEmpty (this.Text) == false && Canvas.GetTop(this.vb) == topPoint)
             return;
-        Duration duration = new Duration (new System.TimeSpan (0, 0, 0, 0, 100));
-
-        DoubleAnimation da = new DoubleAnimation (0, topPoint, duration);
-        this.vb.BeginAnimation (Canvas.TopProperty, da);
+        var sb = new Storyboard ();
         
+        ValueItem TopMove = GetValueItem (To: topPoint,
+                                        path: new PropertyPath (Canvas.TopProperty));
+        ValueItem WidthSize = GetValueItem (From: 100,
+                                            To: 70,
+                                            path: new PropertyPath (Viewbox.WidthProperty));
+        sb.Children.Add(TopMove);
+        sb.Children.Add (WidthSize);
+        sb.Begin (this.vb);
+
+
         this.bdr.BorderBrush = this.Foreground;
+    }
+
+    private ValueItem GetValueItem(PropertyPath path, double From=0.0, double To = 0.0)
+    {
+        ValueItem valueItem = new ValueItem ();
+        valueItem.TargetName = this.vb.Name;
+        valueItem.Property = path;
+        valueItem.From = From;
+        valueItem.To = To;
+        valueItem.Duration = new Duration (new System.TimeSpan (0, 0, 0, 0, 500));
+        valueItem.Mode = Jamesnet.Wpf.Animation.EasingFunctionBaseMode.ExponentialEaseInOut;
+        return valueItem;
     }
 
     private void FocusedExitAction()
     {
-        var topPoint = -(this.vb.ActualHeight / 2);
         if (String.IsNullOrEmpty (this.Text) == false && Canvas.GetTop (this.vb) == topPoint)
             return;
 
-        Duration duration = new Duration (new System.TimeSpan (0, 0, 0, 0, 100));
+        var sb = new Storyboard ();
 
-        DoubleAnimation da = new DoubleAnimation (topPoint, 0, duration);
-        this.vb.BeginAnimation (Canvas.TopProperty, da);
+        ValueItem TopMove = GetValueItem (From: topPoint,
+                                          path: new PropertyPath (Canvas.TopProperty));
+
+        ValueItem WidthSize = GetValueItem (From: 70, 
+                                            To: 100, 
+                                            path: new PropertyPath (Viewbox.WidthProperty));
+        sb.Children.Add (TopMove);
+        sb.Children.Add (WidthSize);
+
+
+        sb.Begin (this.vb);
 
         this.bdr.BorderBrush = this.HintTextColor;
     }

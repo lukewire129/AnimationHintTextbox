@@ -1,6 +1,7 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:james="https://jamesnet.dev/xaml/presentation"
     xmlns:units="clr-namespace:AnimationHintTextbox.UI.Units">
     <Style TargetType="{x:Type units:AnimationHintTextbox}">
         <Setter Property="Height" Value="100" />
@@ -28,7 +29,7 @@
                                 <Viewbox
                                     x:Name="PART_HintArea"
                                     Height="{TemplateBinding Height}"
-                                    Stretch="UniformToFill">
+                                    Stretch="Uniform">
                                     <Border Padding="5">
                                         <TextBlock
                                             x:Name="PART_HintText"
